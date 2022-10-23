@@ -4,13 +4,11 @@ import static org.hamcrest.Matchers.containsString;
 
 import org.hamcrest.Matchers;
 
-import com.APIExam.test.DeletePojo;
+
 import com.examAPI.POJOS.CreatePojo;
 import com.examAPI.Utilities.projectUtilities;
 
-import groovy.transform.ToString;
 import io.restassured.http.ContentType;
-import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 
 public class ReusableMethods {
@@ -23,7 +21,6 @@ public class ReusableMethods {
 		url = fileObject.getPropertyValue("urikey","baseURI"); 
 		return url;
 	}
-	
 	public static CreatePojo setCreateData() {
 		String name = fileObject.getPropertyValue("name","createDetails");
 		String salary = fileObject.getPropertyValue("salary","createDetails");
@@ -51,7 +48,4 @@ public class ReusableMethods {
 	public static void validateCreateData(Response response) {
 		response.then().assertThat().body(containsString(fileObject.getPropertyValue("name","createDetails")));
 	}
-	/*public static void logHeaders(Response response) {
-		response.then().log().headers();
-	}*/
 }
