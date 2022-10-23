@@ -22,16 +22,14 @@ public class EndToEndTestcases extends BaseTestMethods{
 		ReusableMethods.verifyStatusCode(response,200);
 		ReusableMethods.validateStatusCode(response, "success");
 		ReusableMethods.validateCreateData(response);
-		/*verify the name,salary and age data from response is as same as in the request
-		extract the id,print it to console and store it to send to next requests.*/
+		
 	}
 	@Test(priority=3)
 	public static void delete_TC03() {
 		Response response = deleteMethod();
 		ReusableMethods.verifyStatusCode(response,200);
 		ReusableMethods.validateStatusCode(response, "success");
-		//id which you have entered in the path parameter is same as in the response
-		//fetch the message data and print it to console
+		
 	}
 	@Test(priority=4)
 	public static void deleteID0_TC04() {
