@@ -34,38 +34,7 @@ public class ReusableMethods {
 		createDetails.setAge(age);
 		return createDetails;
 	}
-	/*public static void getReadData(Response response) {
-		String accNo = fileObject.getPropertyValue("accountno","createDetails");
-		ReadPojo[] readDetails = response.as(ReadPojo[].class); 
-		for(int i=0;i<readDetails.length;i++) {
-			if((readDetails[i].getAccountno()).equalsIgnoreCase(accNo)) {
-				fileObject.setProperty("departmentno", "1","updateDetails");
-				fileObject.setProperty("userid",readDetails[i].getUserid(),"updateDetails");
-				fileObject.setProperty("id",readDetails[i].getId(),"updateDetails");
-				break;
-			}
-		}
-	}
-	public static UpdatePojo updateData() {
-		String depNo = fileObject.getPropertyValue("departmentno","updateDetails");
-
-		String id = fileObject.getPropertyValue("id","updateDetails");
-		String userid = fileObject.getPropertyValue("userid","updateDetails");
-		UpdatePojo updateData = new UpdatePojo();
-		updateData.setDepartmentno(depNo);
-
-		updateData.setId(id);
-		updateData.setUserid(userid);
-		return updateData ;
-	}*/
-	/*public static DeletePojo deleteData() {
-		String id = fileObject.getPropertyValue("id","updateDetails");
-		String userid = fileObject.getPropertyValue("userid","updateDetails");
-		DeletePojo deleteDetails = new DeletePojo();
-		deleteDetails.setId(id);
-		deleteDetails.setUserid(userid);
-		return deleteDetails ;
-	}*/
+	
 	public static void verifyStatusCode(Response response, int statusCode) {
 		response.then().statusCode(statusCode);
 	}
